@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="jquery.mobile-1.4.5.css">
+<script type="text/javascript" src="jquery-2.2.4.js"></script>
+<script type="text/javascript" src="code.js"></script>
+<script type="text/javascript" src="jquery.mobile-1.4.5.js"></script>
+<head>
+	<title>WeatherApp</title>
+</head>
+<body>
+
+
+<!-- HOME -->
+<div data-role="page" data-theme="c" id="home">
+
+<div id="menu" data-role="header" data-theme="c" data-position="fixed">
+
+	<a href="#ciudades" class="ui-link ui-btn-left ui-btn ui-shadow ui-corner-all">
+		<div id="cities">
+		</div>		
+	</a>
+	
+	<a href="#add" class="ui-link ui-btn-right ui-btn ui-shadow ui-corner-all">
+		<div id="plus"></div>		
+	</a>
+
+	<div id="localizador" class="margenSuperior">
+		<div id="ciudad" class="centrado texto text14 centro"></div>
+		<div id="pais" class=" centrado texto text11 centro"></div>
+	</div>
+	
+</div>
+
+<div data-role="content">
+
+	<div id="cont1">
+		<div id="tiempo" class="texto text18 centro centrado"></div>
+		<img id="icono" class="iconClass"/> 	
+	</div>
+
+	<div id="info" class="ui-grid-a centrado">
+
+		<div id="temp" class="texto2 text64 pesada ui-block-a centrado"></div>
+
+		<div id="datosAtmos" class="ui-block-b centrado">
+			<div class="texto text11 separado" id="humedad"> </div>
+			<div class="texto text11 separado" id="viento"></div>
+			<div class="texto text11 separado" id="temMinMax"></div>
+		</div>
+
+	</div>
+	
+</div>
+	
+	<div data-role="footer" data-position="fixed">
+		<div id="dia" class="centrado texto text18 centro pad"></div>
+	</div>
+
+</div>
+
+<!-- AÑADIR CIUDAD -->
+<div data-role="page" data-theme="c" id="add">
+	
+	<div id="menu" data-role="header" data-theme="c" data-position="fixed">
+		
+		<a href="#home" class="ui-link ui-btn-right ui-btn ui-shadow ui-corner-all">
+			<div id="close"></div>		
+		</a>
+	</div>
+
+<div data-role="content">
+
+<form class="ui-filterable">
+    <input id="autocomplete-input" data-type="search" placeholder="Busca una ciudad...">
+</form>
+	<ul id="autocomplete" data-role="listview" data-inset="true" data-filter="true" data-input="#autocomplete-input"></ul>
+</div>
+</div>
+
+<!-- CIUDADES -->
+<div data-role="page" data-theme="c" id="ciudades">
+	
+	<div id="menu" data-role="header" data-theme="c" data-position="fixed">
+
+		<a href="#" class="ui-link ui-btn-left ui-btn ui-shadow ui-corner-all">
+			<div id="edit"></div>		
+		</a>
+		
+		<a href="#home" class="ui-link ui-btn-right ui-btn ui-shadow ui-corner-all">
+			<div id="close"></div>		
+		</a>
+
+		
+		<ul id="listaciudades"></ul>	
+	
+		
+	</div>
+
+</div>
+	
+
+</body>
+</html>
